@@ -21,6 +21,9 @@ export default function sidebar() {
             ))
         }
       </div>
+      <div className="my-5 p-5">
+        <button className="bg-red-700 w-full py-3 text-white font-bold uppercase rounded text-center hover:bg-red-800 transition-colors cursor-pointer">Cancelar orden</button>
+      </div>
     </div>
   );
 }
