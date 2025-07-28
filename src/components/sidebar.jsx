@@ -1,8 +1,9 @@
+import { useQuiosco } from "../hooks/useQuiosco";
 import Categoria from "./categoria";
-import { categorias } from "../data/categorias";
 import { Link } from "react-router-dom";
 
 export default function sidebar() {
+    const { categorias } = useQuiosco();
   return (
     <div className="md:w-72">
       <div className="p-4">
