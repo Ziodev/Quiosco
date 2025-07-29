@@ -1,5 +1,6 @@
 import { useQuiosco } from "../hooks/useQuiosco";
 import { formatearDinero } from "../helpers";
+import ResumenProducto from "./ResumenProducto";
 export default function resumen() {
   const {pedido} = useQuiosco();
   return (
@@ -11,11 +12,10 @@ export default function resumen() {
             <p className="text-center text-2xl">No hay elementos en tu pedido</p>
           ) : (
             pedido.map(producto => (
-              <div key={producto.id} className="flex items-center justify-between border-b">
-                <p className="text-2xl text-center">{producto.nombre}</p>
-                <p className="text-2xl text-center">{producto.precio}</p>
-              </div>
-              
+              <ResumenProducto 
+              key={producto.id} 
+              producto={producto} 
+              />
             ))
           )}
         </div>

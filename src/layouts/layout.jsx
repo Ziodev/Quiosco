@@ -1,6 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Modal from "react-modal";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 import Sidebar from "../components/sidebar";
 import Resumen from "../components/resumen";
 import ModalProducto from "../components/ModalProducto";
@@ -39,7 +41,7 @@ export default function Layout() {
         <ModalProducto />
       </Modal>
     )}
-
+    <ToastContainer />
     </>
   );
 }
